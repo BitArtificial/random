@@ -21,7 +21,7 @@ class Random:
     
     def randint(self,start=1,stop=100,num_of_rand=1,seed=int(time.time())%100):
         self.run(seed=seed,idx=-1,num_of_rand=10)
-        return [int(num*stop) for num in self.result]
+        return [int(num*(stop-start)+start) for num in self.result]
     def random(self,num_of_rand=1,seed=int(time.time())%100):
         self.run(seed=seed,idx=-1,num_of_rand=1)
         return self.result
