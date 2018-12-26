@@ -20,10 +20,10 @@ class Random:
         return self.run(seed=x,idx=idx,num_of_rand=num_of_rand)
     
     def randint(self,start=1,stop=100,num_of_rand=1,seed=int(time.time())%100):
-        self.run(seed=seed,idx=-1,num_of_rand=10)
+        self.run(seed=seed,idx=-1,num_of_rand=num_of_rand)
         return [int(num*(stop-start)+start) for num in self.result]
     def random(self,num_of_rand=1,seed=int(time.time())%100):
-        self.run(seed=seed,idx=-1,num_of_rand=1)
+        self.run(seed=seed,idx=-1,num_of_rand=num_of_rand)
         return self.result
     def uniform(self,start=1,stop=100,num_of_rand=1,seed=int(time.time())%100):
         #等我有时间看了均匀分布的相关概念再说，不想写了
